@@ -49,7 +49,7 @@ public class Main extends Applet implements Runnable, KeyListener, FrameData {
 
     public void paint(Graphics g){
         //BACKGROUND
-        gfx.setColor(background);//background
+        gfx.setColor(Color.BLACK);//background
         gfx.fillRect(0,0,WIDTH,HEIGHT);//background size
         int pSize=3;
         int pw=WIDTH/pSize;
@@ -214,9 +214,9 @@ public class Main extends Applet implements Runnable, KeyListener, FrameData {
     public void keyPressed(KeyEvent e) {
         float rad1=3f;
         if (e.getKeyCode()==KeyEvent.VK_RIGHT){
-            rotateAround(orient.x+.02f,orient.y);
+            rotateAround(orient.x+.05f,orient.y);
         }else if (e.getKeyCode()==KeyEvent.VK_LEFT){
-            rotateAround(orient.x-.02f,orient.y);
+            rotateAround(orient.x-.05f,orient.y);
         }if (e.getKeyCode()==KeyEvent.VK_UP){
             //orient.y+=.2;
             rotateAround(orient.x,orient.y+.05f);
